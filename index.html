@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111110">
+  <meta name="description" content="FILAMENTO JOYERÍA — joyería contemporánea. Materia, hilo y oro.">
+  <title>FILAMENTO JOYERÍA | Materia, hilo y oro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">JOYERÍA CONTEMPORÁNEA · HECHA PARA ACOMPAÑARTE</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Filamento Joyería, inicio">
+      <span class="brand-name">FILAMENTO</span>
+      <span class="brand-subtitle">J O Y E R Í A</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#coleccion">Colección</a>
+      <a href="#historia">Nuestra esencia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart-open" id="open-cart" aria-label="Abrir carrito">
+      <span>Carrito</span><span class="cart-count" id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">PIEZAS CON INTENCIÓN</p>
+        <h1>Materia,<br><em>hilo y oro.</em></h1>
+        <p class="hero-description">Joyería contemporánea que encuentra belleza en los detalles. Piezas versátiles, hechas para expresar tu propia esencia.</p>
+        <a class="button button-gold" href="#coleccion">Descubrir colección <span aria-hidden="true">↗</span></a>
+        <p class="hero-note">DISEÑO ATEMPORAL · ESTILO SIN GÉNERO</p>
+      </div>
+      <div class="hero-art" role="img" aria-label="Manilla dorada sobre tela color marfil, fotografía del catálogo FILAMENTO JOYERÍA">
+        <img class="hero-product-photo" src="images/manilla-05.jpg" alt="Manilla con cuentas doradas sobre tela marfil">
+        <div class="art-caption"><span>01 / FILAMENTO</span><span>OBJETOS PARA LLEVAR</span></div>
+      </div>
+        <div class="art-caption"><span>01 / FILAMENTO</span><span>OBJETOS PARA LLEVAR</span></div>
+      </div>
+    </section>
+
+    <section class="values-strip" aria-label="Valores de la marca">
+      <span>DISEÑO CONSCIENTE</span><span class="strip-dot">✳</span>
+      <span>DETALLES QUE PERDURAN</span><span class="strip-dot">✳</span>
+      <span>HECHO PARA TI</span>
+    </section>
+
+    <section class="collection section-wrap" id="coleccion">
+      <div class="section-heading">
+        <div><p class="eyebrow">SELECCIÓN FILAMENTO</p><h2>La colección</h2></div>
+        <p>Encuentra esa pieza que se siente como tuya.</p>
+      </div>
+      <div class="section-filters" aria-label="Tipo de material">
+        <button class="section-filter active" data-section="Oro laminado">Oro laminado</button>
+        <button class="section-filter" data-section="Oro">Oro</button>
+      </div>
+      <div class="filters" id="filters" aria-label="Tipo de pieza">
+        <button class="filter active" data-category="Manillas">Manillas</button>
+        <button class="filter" data-category="Anillos">Anillos</button>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <p class="sample-note">Los precios están pendientes de confirmación. Las secciones de anillos y oro se irán completando con sus fotografías y referencias.</p>
+    </section>
+
+    <section class="manifesto" id="historia">
+      <div class="manifesto-mark">F.</div>
+      <div class="manifesto-copy">
+        <p class="eyebrow">LA ESENCIA DE FILAMENTO</p>
+        <h2>Lo extraordinario<br>vive en los detalles.</h2>
+        <p>Un hilo, una forma, un destello. Creamos piezas que conectan materiales y personalidad, con una estética sobria que acompaña todos los días.</p>
+      </div>
+    </section>
+
+    <section class="closing section-wrap" id="contacto">
+      <p class="eyebrow">¿TIENES UNA PREGUNTA?</p>
+      <h2>Hablemos de tu próxima pieza.</h2>
+      <p>Escríbenos por WhatsApp para resolver dudas sobre tu pedido.</p>
+      <a class="button button-outline" id="contact-whatsapp" href="https://wa.me/573025519037" target="_blank" rel="noopener">Contactar por WhatsApp ↗</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><span class="brand-name">FILAMENTO</span><span class="brand-subtitle">J O Y E R Í A</span></a>
+    <span>Materia, hilo y oro.</span>
+    <span>© <span id="year"></span> FILAMENTO JOYERÍA</span>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="drawer-header">
+      <div><p class="eyebrow">TU SELECCIÓN</p><h2>Carrito <span id="drawer-item-count">(0)</span></h2></div>
+      <button class="icon-button" id="close-cart" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span class="empty-icon">○</span><h3>Tu carrito está vacío</h3><p>Descubre una pieza para empezar.</p><button class="text-button" id="continue-shopping">Explorar colección ↗</button></div>
+    <div class="cart-summary" id="cart-summary">
+      <div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal">$0</strong></div>
+      <p class="shipping-note">El envío se coordina por WhatsApp y no está incluido en este subtotal.</p>
+      <button class="button button-gold full-width" id="go-checkout">Continuar pedido ↗</button>
+    </div>
+  </aside>
+
+  <div class="modal-backdrop" id="checkout-backdrop"></div>
+  <section class="checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" aria-hidden="true">
+    <div class="drawer-header">
+      <div><p class="eyebrow">CASI TUYO</p><h2 id="checkout-title">Datos del pedido</h2></div>
+      <button class="icon-button" id="close-checkout" aria-label="Cerrar formulario">✕</button>
+    </div>
+    <p class="checkout-intro">Completa tus datos. Prepararemos el mensaje para que lo envíes directamente por WhatsApp.</p>
+    <form id="checkout-form">
+      <label for="customer-name">Nombre completo *</label>
+      <input id="customer-name" name="name" autocomplete="name" required maxlength="100" placeholder="Tu nombre">
+      <label for="customer-phone">Tu teléfono *</label>
+      <input id="customer-phone" name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="Número de contacto">
+      <label for="customer-city">Ciudad *</label>
+      <input id="customer-city" name="city" autocomplete="address-level2" required maxlength="80" placeholder="Ciudad o municipio">
+      <label for="customer-address">Dirección de entrega</label>
+      <input id="customer-address" name="address" autocomplete="street-address" maxlength="160" placeholder="Barrio, calle, apto. (opcional)">
+      <label for="customer-notes">Nota adicional</label>
+      <textarea id="customer-notes" name="notes" rows="3" maxlength="400" placeholder="Talla, color, indicaciones especiales..."></textarea>
+      <div class="checkout-total"><span>Total de productos</span><strong id="checkout-total">$0 COP</strong></div>
+      <p class="privacy-note">Tus datos se incluirán en el mensaje de WhatsApp que decidas enviar. No se almacenan en un servidor de esta página.</p>
+      <button class="button button-gold full-width" type="submit">Enviar pedido por WhatsApp ↗</button>
+    </form>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
